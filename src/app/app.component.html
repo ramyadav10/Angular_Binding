@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="title">
+              <span>Hello {{this.userName}} from {{this.title}}</span><br/><br/>
+        </div>
+       <div class="image"> 
+            <img [src] = imgUrl alt="This is a image i added" (click)=onClick($event)/>
+        </div>
+        <div class="user">
+            <input (input)='onInput($event)' [(ngModel)] = 'userName'/> 
+            <span class="error-output">{{this.errorMessage}}</span>
+        </div>
+    </body>
+</html>
+
+<router-outlet></router-outlet>
